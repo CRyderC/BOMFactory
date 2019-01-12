@@ -1,0 +1,36 @@
+﻿body {
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.results-cell {
+    padding: 10px 5px 10px 5px;
+    height : 100px;
+}
+
+.results-cell-container {
+    margin: 10px 5px 10px 5px;
+}
+
+.results-cell-container img {
+    height: 50px;
+}
+
+.results-cell-copy {
+    margin: 5px, 0px, 5px, 0px;
+}
+
+.selected {
+    border : thick;
+    border-color : deepskyblue;
+    border-radius : 4px 4px 4px 4px;
+    border-style: solid;
+    padding : 10px 5px 10px 5px;
+}
