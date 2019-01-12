@@ -1,0 +1,93 @@
+UX Layer
+    TODOs:
+        Define the UX: how many pages, how many functions
+        Create Wireframes of pages with Adobe XD
+        Use wireframes to map out re-usable components
+
+UI Layer
+    TODOs:
+	Sort out toolchain we will be using
+	Build the project skeleton
+    	Implement components in React
+    	Add a client side (/w AJAX and Typescript)
+    	Use the results of Service Layer TODOs to create the AJAX calls
+    	Iteratively refine the UI
+    
+Service Layer
+    We need a REST (probably) service.
+    It will sit on a server and listen for POST requests from the UI Layer.
+    Clicking the BOM icon will serialize the list of materials into JSON
+        ex:
+                {
+                "session" : "123456",
+                "dimensions" : {
+                "width" : "3/8",
+                "height" : "1/4",
+                "length" : "2/4"
+                }
+                "keywords" : [
+                {
+                "value" : "dowel"
+                }
+                {
+                "value" : "wood"
+                }
+                ],
+                "color" : "black",
+                ...
+                ...
+                }
+     We could also have cached, or results known ahead of time, and send supplier specific JSON
+        ex:
+            {
+            "ace" : {
+            "itemId" : "123456",
+            "quantity" : "4",
+            "itemDescription" : "yada yada something or other"
+            },
+            "homedepot" : null,
+            "Fred's hardware" : {
+            "itemId" : "12345",
+            "quantity" : "4",
+            "itemDescription" : "Lorem Ipsum"
+            }
+            }
+        The real difficult part will be translating arbitrary inputs into search results that make sense.
+        It's still unclear to me what the best way to do that would be.
+        We would probably want to be routinely scraping the websites, so we could have a cached list of results
+        And once they search, if we don't find what they want on the website, we could fall back to some cached result.
+    
+	TODOs:
+          Define Search JSON
+          Create the service
+          Translate search into ordered results
+
+Web-Scraping
+    This seems like the really hard part, the absolute core of the website
+    The difficult part will be translating arbitrary inputs into actual items from the website
+    	Some Considerations:
+    	    How accurately can we scrape each supplier, and can we get the same things from each?
+            Are there any legal considerations from using scraping information in this way?
+            How do we get in contact with more local suppliers?
+            Is there outside expertise needed for this functionality?
+            What suppliers make sense?
+            Are there any existing APIs we can use? (Seems unlikely they would allow them to be used for monetization, but we can definitely use them to get started)
+    
+    TODOs:
+   	Much more research, generally
+        Make a POC. Can we use the example list to create a cart of items from each of the suppliers?
+        
+
+Business Considerations
+    Considerations:
+    	How and when do we monetize? Immediately? Build user base first?</li>
+    
+Miscellania:
+	We could have a generator, you put in a list of products and we generate the html for you to embed in your website
+            so as to cut down on the heavy lifting later on (decoding your results, etc.)
+
+
+First thing's first:
+	Create one BOM POC using the search apis from Mouser.
+	Use a simple Create React project
+	    We basically want one page of .js that will take in a (JSON-serialized, presumably) list and output (links?) to products on Mouser's website
