@@ -1,5 +1,5 @@
 const Index = () => (
-    <div id="main-page" class="carousel slide" data-ride="carousel" data-interval="6000">
+<div id="main-page" class="carousel slide" data-ride="carousel" data-interval="6000">
     <div class="row body-content">
         <h1>
             BOM Factory
@@ -39,27 +39,25 @@ const Index = () => (
             </p>
             <p>
                 1 – 3/16“ Fir plywood cut into 1- 6” X 8 inch
+            </p>
             <p>1 – 5 13/16” X 8 inch rectangles</p>
             <p>
                 Small nails or brads 1” long for assembly
             </p>
             <div id="share-buttons">
                 <p>Share on social media:</p>
-                <!-- Facebook -->
                 <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank" >
                     <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" height="20" />
                 </a>
 
-                <!-- Reddit -->
                 <a href="http://reddit.com/submit?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons" target="_blank" >
                     <img src="https://simplesharebuttons.com/images/somacro/reddit.png" alt="Reddit" height="20" />
                 </a>
 
-                <!-- Twitter -->
                 <a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank" >
                     <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" height="20" />
                 </a>
-                <!-- BOM -->
+                
                 <a href="/Search/Results" target="_blank" >
                     <img src="~/images/bom.jpg" alt="BOM" height="20" />
                 </a>
@@ -71,7 +69,6 @@ const Index = () => (
             <p>Find the BOM Factory icon wherever you can find some share on social media buttons and click it</p>
         </div>
         <div class="col-md-8">
-            <!-- BOM -->
             <a href="/Search/Results" target="_blank" height="30">
                 <img src="~/images/bom.jpg" alt="BOM" height="100" />
             </a>
